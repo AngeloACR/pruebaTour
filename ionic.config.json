@@ -1,0 +1,7 @@
+{
+  "name": "pruebaTour",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
