@@ -1,0 +1,11 @@
+#container {
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+}
+
+ion-input.input {
+  --background: rgba(113, 113, 113, 0.1);
+  --color: black;
+  --padding: 10px;
+}

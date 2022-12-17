@@ -1,3 +1,35 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title> Prueba Tour </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <div id="container">
+      <ion-list>
+        <ion-item>
+          <ion-label>Nombre: </ion-label>
+          <ion-input
+            [clearInput]="true"
+            class="input"
+            [(ngModel)]="nombre"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Cargue una imagen: </ion-label>
+          <ion-input type="file" (change)="cambiarArchivo($event)"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="enviar()">Enviar datos</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="recibir()">Obtener datos</ion-button>
+        </ion-item>
+        <ion-item *ngIf="hayImagen">
+          <img [src]="imgLink" />
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
 </ion-app>
